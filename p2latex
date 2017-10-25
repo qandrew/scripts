@@ -1,0 +1,23 @@
+#!/bin/bash
+# simple script to compile a latex file, and open the pdf on ubuntu
+# Oct 24 2017
+
+if [ "$1" == "" ]; then
+    echo "Please Provide .tex file"
+    exit 1
+fi
+
+echo 'making pdf for' $1
+
+pdflatex $1 # compile pdf
+
+s=$1
+s2="${s%%.*}"
+
+rm $s2.log $s2.out $s2.aux # remove aux stuff
+
+evince $s2.pdf # open pdf
+
+
+
+
