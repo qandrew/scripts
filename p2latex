@@ -16,9 +16,8 @@ s2="${s%%.*}"
 
 bibtex $s2.aux # compile bib
 pdflatex $1
-pdflatex $1 
 
-rm $s2.log $s2.out $s2.aux # remove aux stuff
+rm $s2.log $s2.out $s2.aux $s2.bbl $s2.blg # remove aux stuff
 
 evince $s2.pdf # open pdf
 
