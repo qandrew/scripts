@@ -1,0 +1,13 @@
+[user]
+	email = axia@mit.edu
+[alias]
+	amend = commit --amend --no-edit
+	sl = log --graph --all --decorate --oneline
+	aliases = !git config --get-regexp ^alias\\. | sed -e s/^alias.// -e s/\\ /\\ $(printf \"\\043\")--\\>\\ / | column -t -s $(printf \"\\043\") | sort -k 1
+	st = status
+	cm = commit
+	ol = log --oneline
+	co = checkout
+	ro = rebase --onto
+[core]
+	excludesfile = /Users/andrew.xia/.gitignore_global
